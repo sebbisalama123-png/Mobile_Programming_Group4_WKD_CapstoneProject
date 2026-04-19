@@ -1,3 +1,153 @@
 <resources>
-    <string name="app_name">SaccoMobileApplication</string>
+    <string name="app_name">Unity Sacco</string>
+
+    <!-- ── Common ──────────────────────────────────────────────────────────── -->
+    <string name="cd_back">Back</string>
+    <string name="cd_hide_password">Hide password</string>
+    <string name="cd_show_password">Show password</string>
+    <string name="btn_logout">Logout</string>
+    <string name="label_password">Password</string>
+    <string name="label_confirm_password">Confirm Password</string>
+    <!-- Currency: Ugandan Shillings -->
+    <string name="currency_amount">UGX %s</string>
+    <string name="credit_amount">+ UGX %s</string>
+    <string name="debit_amount">- UGX %s</string>
+
+    <!-- ── Login Screen ────────────────────────────────────────────────────── -->
+    <string name="login_headline">Welcome Back</string>
+    <string name="login_subtitle">Sign in to your account</string>
+    <string name="label_phone_number">Phone Number</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="link_forgot_password">Forgot password?</string>
+    <string name="link_no_account">Don\'t have an Account?</string>
+    <string name="copyright">2026 \u00A9 Unity Sacco</string>
+    <string name="btn_admin_login">Admin Login</string>
+    <string name="error_invalid_credentials">Invalid phone number or password</string>
+    <string name="cd_sacco_logo">Sacco Logo</string>
+
+    <!-- ── Register Screen ────────────────────────────────────────────────── -->
+    <string name="title_register">CREATE ACCOUNT</string>
+    <string name="register_subtitle">Please fill in your details to join the Sacco.</string>
+    <string name="label_full_name">Full Name</string>
+    <string name="label_id_number">National ID Number</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="error_passwords_mismatch">Passwords do not match</string>
+    <string name="error_phone_taken">Phone number already registered</string>
+    <string name="error_fields_empty">All fields are required</string>
+    <string name="error_registration_failed">Registration failed. Please try again.</string>
+
+    <!-- ── Dashboard Screen ───────────────────────────────────────────────── -->
+    <string name="title_dashboard">DASHBOARD</string>
+    <string name="cd_open_menu">Open menu</string>
+    <string name="cd_profile">Profile</string>
+    <string name="cd_more_options">More options</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_settings">Settings</string>
+    <string name="greeting_member">Hello Member %s,</string>
+    <string name="greeting_prompt">What would you like to do today?</string>
+    <string name="cd_user_avatar">User avatar</string>
+    <string name="section_quick_actions">Quick Actions</string>
+    <string name="action_topup_savings">Topup\nSavings</string>
+    <string name="action_apply_loan">Apply\nLoan</string>
+    <string name="action_change_password">Change\nPassword</string>
+    <string name="action_edit_profile">Edit My\nProfile</string>
+    <string name="section_account_summary">Account Summary</string>
+    <string name="card_my_savings">My Savings</string>
+    <string name="btn_check_balance">CHECK BALANCE</string>
+    <string name="btn_mini_statement">MINI STATEMENT</string>
+    <string name="card_share_capital">Share Capital</string>
+    <string name="card_loan_balance">Loan Balance</string>
+    <string name="loans_given">Loans Given: %d</string>
+
+    <!-- ── Loan Application Screen ────────────────────────────────────────── -->
+    <string name="title_apply_loan">APPLY LOAN</string>
+    <string name="loan_section_product">1). Loan Product</string>
+    <string name="loan_product_label">Please choose your loan product below</string>
+    <string name="loan_min_savings">Minimum Savings</string>
+    <string name="loan_deposit_balance">My Deposit Balance</string>
+    <string name="loan_available_deposits">Available Deposits</string>
+    <string name="loan_eligibility_status">Eligibility Status</string>
+    <string name="status_eligible">Eligible</string>
+    <string name="status_not_eligible">Not Eligible</string>
+    <string name="loan_guarantors">Guarantors Required</string>
+    <string name="loan_max_awardable">Max. Loan Awardable</string>
+    <string name="loan_terms_label">Read Terms &amp; Conditions For This Loan</string>
+    <string name="cd_submit">Submit</string>
+
+    <!-- ── Transaction Ledger ─────────────────────────────────────────────── -->
+    <string name="title_mini_statement">MINI STATEMENT</string>
+    <string name="ledger_title">Transaction History</string>
+    <string name="ledger_records_count">%d records found</string>
+    <string name="transaction_credit">Credit</string>
+    <string name="transaction_debit">Debit</string>
+
+    <!-- ── Admin Panel ────────────────────────────────────────────────────── -->
+    <string name="title_admin_dashboard">ADMIN DASHBOARD</string>
+    <string name="admin_all_caught_up">All caught up!</string>
+    <string name="admin_no_pending">No pending loan requests.</string>
+    <string name="status_pending">PENDING</string>
+    <string name="btn_reject">REJECT</string>
+    <string name="btn_approve">APPROVE</string>
+
+    <!-- ── Legacy HomeScreen ──────────────────────────────────────────────── -->
+    <string name="label_welcome">Welcome, %s!</string>
+    <string name="btn_logout_legacy">Logout</string>
+
+    <!-- Change Password Screen -->
+    <string name="title_change_password">CHANGE PASSWORD</string>
+    <string name="label_current_password">Current Password</string>
+    <string name="label_new_password">New Password</string>
+    <string name="label_confirm_new_password">Confirm New Password</string>
+    <string name="btn_change_password">CHANGE PASSWORD</string>
+    <string name="error_wrong_current_password">Current password is incorrect</string>
+    <string name="success_password_changed">Password changed successfully</string>
+
+    <!-- Top-Up Savings Screen -->
+    <string name="title_topup_savings">TOP UP SAVINGS</string>
+    <string name="label_topup_amount">Amount to Deposit (UGX)</string>
+    <string name="btn_topup">DEPOSIT</string>
+    <string name="success_topup">Deposit successful</string>
+    <string name="error_invalid_amount">Enter a valid amount greater than zero</string>
+    <string name="error_topup_failed">Deposit failed. Please try again.</string>
+    <string name="topup_current_balance">Current Balance</string>
+
+    <!-- Profile Screen -->
+    <string name="title_profile">MY PROFILE</string>
+    <string name="profile_full_name">Full Name</string>
+    <string name="profile_phone">Phone Number</string>
+    <string name="profile_id_number">National ID</string>
+    <string name="profile_account_number">Account Number</string>
+    <string name="profile_savings_balance">Savings Balance</string>
+    <string name="profile_share_capital">Share Capital</string>
+
+    <!-- Forgot Password Screen -->
+    <string name="title_forgot_password">FORGOT PASSWORD</string>
+    <string name="forgot_step1_subtitle">Enter your registered phone number and National ID to verify your identity.</string>
+    <string name="btn_verify_identity">VERIFY IDENTITY</string>
+    <string name="forgot_step2_subtitle">Identity verified. Enter your new password below.</string>
+    <string name="btn_reset_password">RESET PASSWORD</string>
+    <string name="error_identity_not_found">No account found with those details</string>
+    <string name="success_password_reset">Password reset successfully. Please log in.</string>
+
+    <!-- Settings Screen -->
+    <string name="title_settings">SETTINGS</string>
+    <string name="settings_section_app">App Information</string>
+    <string name="settings_app_name">Application</string>
+    <string name="settings_app_value">Unity Sacco v1.0</string>
+    <string name="settings_sacco_name">SACCO Name</string>
+    <string name="settings_sacco_value">Unity Savings and Credit Co-operative</string>
+    <string name="settings_contact">Support Contact</string>
+    <string name="settings_contact_value">+256 700 000 000</string>
+    <string name="settings_section_account">Account</string>
+    <string name="settings_logout">Logout</string>
+
+    <!-- Check Balance Dialog -->
+    <string name="dialog_balance_title">Account Balance</string>
+    <string name="dialog_balance_savings">Savings Balance</string>
+    <string name="dialog_balance_share">Share Capital</string>
+    <string name="btn_close">CLOSE</string>
+
+    <!-- Additional dashboard labels -->
+    <string name="action_my_loans">My Loans</string>
+    <string name="btn_view_my_loans">VIEW MY LOANS</string>
 </resources>
