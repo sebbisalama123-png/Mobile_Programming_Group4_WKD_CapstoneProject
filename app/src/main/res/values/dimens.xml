@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ── Spacing ────────────────────────────────────────────────────────── -->
+    <dimen name="screenPadding">24dp</dimen>
+    <dimen name="spacingLarge">24dp</dimen>
+    <dimen name="spacingMedium">16dp</dimen>
+    <dimen name="spacingSmall">8dp</dimen>
+    <dimen name="spacingXSmall">6dp</dimen>
+    <dimen name="spacingFieldGap">14dp</dimen>
+    <dimen name="spacingTiny">4dp</dimen>
+    <dimen name="spacingXXSmall">2dp</dimen>
+
+    <!-- ── Buttons ────────────────────────────────────────────────────────── -->
+    <dimen name="buttonHeight">70dp</dimen>
+    <dimen name="buttonCornerRadius">8dp</dimen>
+    <dimen name="circularButtonSize">56dp</dimen>
+    <dimen name="progressIndicatorSize">22dp</dimen>
+    <dimen name="progressIndicatorSizeSmall">20dp</dimen>
+
+    <!-- ── Logo / Branding ────────────────────────────────────────────────── -->
+    <dimen name="logoBoxSize">80dp</dimen>
+    <dimen name="logoCornerRadius">20dp</dimen>
+    <dimen name="logoIconSize">40dp</dimen>
+    <dimen name="logoPaddingTop">56dp</dimen>
+
+    <!-- ── Cards ─────────────────────────────────────────────────────────── -->
+    <dimen name="cardCornerRadius">12dp</dimen>
+    <dimen name="cardElevation">2dp</dimen>
+    <dimen name="cardPaddingHorizontal">16dp</dimen>
+    <dimen name="cardPaddingVertical">14dp</dimen>
+
+    <!-- ── Icons & Avatars ────────────────────────────────────────────────── -->
+    <dimen name="avatarSize">48dp</dimen>
+    <dimen name="quickActionIconSize">52dp</dimen>
+    <dimen name="quickActionIconInner">26dp</dimen>
+    <dimen name="quickActionItemWidth">76dp</dimen>
+    <dimen name="cardHeaderIconSize">32dp</dimen>
+    <dimen name="transactionIconSize">36dp</dimen>
+    <dimen name="transactionIconInner">20dp</dimen>
+    <dimen name="emptyStateIconSize">64dp</dimen>
+    <dimen name="circularNavIconSize">24dp</dimen>
+</resources>
