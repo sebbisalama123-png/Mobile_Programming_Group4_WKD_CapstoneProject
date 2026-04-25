@@ -125,7 +125,7 @@ private fun LoanApplicationContent(
             .verticalScroll(rememberScrollState())
             .padding(
                 horizontal = dimensionResource(R.dimen.spacingMedium),
-                vertical   = dimensionResource(R.dimen.spacingSmall) + 4.dp
+                vertical   = dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.spacingTiny)
             )
     ) {
         Text(
@@ -134,7 +134,7 @@ private fun LoanApplicationContent(
                 fontWeight = FontWeight.Bold,
                 color      = SaccoRed
             ),
-            modifier   = Modifier.padding(bottom = dimensionResource(R.dimen.spacingSmall) + 4.dp)
+            modifier   = Modifier.padding(bottom = dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.spacingTiny) )
         )
 
         LoanProductDropdown(
