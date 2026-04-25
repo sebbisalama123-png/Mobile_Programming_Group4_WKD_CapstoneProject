@@ -195,7 +195,7 @@ private fun ProfileRow(label: String, value: String) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(text = label, style = MaterialTheme.typography.bodyMedium.copy(color = MediumGrey))
-        Spacer(modifier = Modifier.width(8.dp))
+        Spacer(modifier = Modifier.width(dimensionResource(R.dimen.spacingSmall)))
         Text(
             text = value,
             style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.SemiBold)
@@ -205,5 +205,5 @@ private fun ProfileRow(label: String, value: String) {
 
 @Composable
 private fun ProfileDivider() {
-    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness = 0.5.dp)
+    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness = dimensionResource(R.dimen.hairlineStroke))
 }
