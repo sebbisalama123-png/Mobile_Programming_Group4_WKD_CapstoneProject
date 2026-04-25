@@ -254,7 +254,7 @@ private fun LoanRequestCard(
                 )
             )
 
-            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingSmall) + 4.dp))
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.spacingTiny)))
 
             // ── Action row ────────────────────────────────────────────────────
             Row(
@@ -264,7 +264,7 @@ private fun LoanRequestCard(
             ) {
                 OutlinedButton(
                     onClick = onReject,
-                    border  = BorderStroke(1.dp, SaccoRed)
+                    border  = BorderStroke(dimensionResource(R.dimen.thinStroke), SaccoRed)
                 ) {
                     Text(text = stringResource(R.string.btn_reject), color = SaccoRed)
                 }
