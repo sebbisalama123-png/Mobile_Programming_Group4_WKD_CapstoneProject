@@ -142,7 +142,7 @@ private fun LoanApplicationContent(
             onSelect = onProductSelect
         )
 
-        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingMedium) + 4.dp))
+        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingMedium) +dimensionResource(R.dimen.spacingTiny)))
 
         EligibilityInfoCard(uiState = uiState)
 
@@ -236,7 +236,7 @@ private fun EligibilityInfoCard(uiState: LoanApplicationUiState) {
         Column(
             modifier = Modifier.padding(
                 horizontal = dimensionResource(R.dimen.cardPaddingHorizontal),
-                vertical   = dimensionResource(R.dimen.spacingSmall) + 4.dp
+                vertical   = dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.spacingTiny)
             )
         ) {
             InfoRow(
