@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- ── Spacing ────────────────────────────────────────────────────────── -->
+
     <dimen name="spacingXXLarge">88dp</dimen>
+    <dimen name="spacingXLarge">72dp</dimen>
     <dimen name="screenPadding">24dp</dimen>
     <dimen name="spacingLarge">24dp</dimen>
     <dimen name="spacingMedium">16dp</dimen>

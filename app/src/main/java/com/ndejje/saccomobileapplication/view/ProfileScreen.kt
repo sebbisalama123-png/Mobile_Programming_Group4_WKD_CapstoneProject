@@ -142,11 +142,11 @@ private fun ProfileContent(data: ProfileData, modifier: Modifier = Modifier) {
                 imageVector = Icons.Default.AccountCircle,
                 contentDescription = null,
                 tint = White,
-                modifier = Modifier.size(72.dp)
+                modifier = Modifier.size(dimensionResource(R.dimen.spacingXLarge))
             )
         }
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingSmall)))
 
         Text(
             text = data.fullName,
