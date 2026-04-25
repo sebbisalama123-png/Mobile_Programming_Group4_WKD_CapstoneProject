@@ -84,7 +84,7 @@ fun LoginScreen(
                     modifier           = Modifier.size(dimensionResource(R.dimen.logoIconSize))
                 )
             }
-            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingSmall) + 4.dp))
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingSmall) +  dimensionResource(R.dimen.spacingTiny)))
             Text(
                 text  = stringResource(R.string.app_name),
                 style = MaterialTheme.typography.titleMedium.copy(
@@ -98,7 +98,7 @@ fun LoginScreen(
         Column(
             modifier            = Modifier
                 .fillMaxWidth()
-                .padding(vertical = dimensionResource(R.dimen.spacingLarge) + 8.dp),
+                .padding(vertical = dimensionResource(R.dimen.spacingLarge) + dimensionResource(R.dimen.spacingSmall)),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
@@ -113,7 +113,7 @@ fun LoginScreen(
                 text  = stringResource(R.string.login_subtitle),
                 style = MaterialTheme.typography.bodyMedium.copy(color = MediumGrey)
             )
-            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingLarge) + 4.dp))
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingLarge) + dimensionResource(R.dimen.spacingTiny)))
 
             // Phone Number field
             OutlinedTextField(
@@ -205,7 +205,7 @@ fun LoginScreen(
                     CircularProgressIndicator(
                         modifier    = Modifier.size(dimensionResource(R.dimen.progressIndicatorSize)),
                         color       = MaterialTheme.colorScheme.onPrimary,
-                        strokeWidth = 2.dp
+                        strokeWidth = dimensionResource(R.dimen.spacingXXSmall)
                     )
                 } else {
                     Text(
@@ -217,7 +217,7 @@ fun LoginScreen(
                 }
             }
 
-            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingSmall) + 4.dp))
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.spacingTiny)))
 
             Row(
                 modifier              = Modifier.fillMaxWidth(),
@@ -255,7 +255,7 @@ fun LoginScreen(
             )
             TextButton(
                 onClick        = onAdminLogin,
-                contentPadding = PaddingValues(0.dp)
+                contentPadding = PaddingValues(dimensionResource(R.dimen.spacingNone))
             ) {
                 Text(
                     text  = stringResource(R.string.btn_admin_login),

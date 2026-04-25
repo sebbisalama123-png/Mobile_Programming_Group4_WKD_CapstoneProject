@@ -10,6 +10,9 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Assignment
+import androidx.compose.material.icons.automirrored.filled.List
+import androidx.compose.material.icons.automirrored.filled.TrendingUp
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -241,7 +244,7 @@ private fun GreetingSection(memberName: String) {
             .fillMaxWidth()
             .padding(
                 horizontal = dimensionResource(R.dimen.spacingMedium),
-                vertical   = dimensionResource(R.dimen.spacingMedium) + 4.dp
+                vertical   = dimensionResource(R.dimen.spacingMedium) + dimensionResource(R.dimen.spacingTiny)
             ),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment     = Alignment.CenterVertically
@@ -260,7 +263,7 @@ private fun GreetingSection(memberName: String) {
                 style = MaterialTheme.typography.bodyMedium.copy(color = SaccoRed)
             )
         }
-        Spacer(modifier = Modifier.width(dimensionResource(R.dimen.spacingSmall) + 4.dp))
+        Spacer(modifier = Modifier.width(dimensionResource(R.dimen.spacingSmall) +  dimensionResource(R.dimen.spacingTiny)))
         Icon(
             imageVector        = Icons.Default.AccountCircle,
             contentDescription = stringResource(R.string.cd_user_avatar),
@@ -283,8 +286,8 @@ private fun QuickActionsRow(
 ) {
     val actions = listOf(
         QuickAction(stringResource(R.string.action_topup_savings), Icons.Default.AccountBalance) { onTopUpSavings() },
-        QuickAction(stringResource(R.string.action_apply_loan), Icons.Default.Assignment) { onApplyLoan() },
-        QuickAction(stringResource(R.string.action_my_loans), Icons.Default.List) { onMyLoans() },
+        QuickAction(stringResource(R.string.action_apply_loan), Icons.AutoMirrored.Filled.Assignment) { onApplyLoan() },
+        QuickAction(stringResource(R.string.action_my_loans), Icons.AutoMirrored.Filled.List) { onMyLoans() },
         QuickAction(stringResource(R.string.action_change_password), Icons.Default.Lock) { onChangePassword() }
     )
 
@@ -348,7 +351,7 @@ private fun SavingsCard(
             title    = stringResource(R.string.card_my_savings),
             subtitle = maskedAccountNumber
         )
-        HorizontalDivider(modifier = Modifier.padding(vertical = dimensionResource(R.dimen.spacingSmall) + 2.dp))
+        HorizontalDivider(modifier = Modifier.padding(vertical = dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.spacingXXSmall)))
         CardActionRow(
             leftLabel = stringResource(R.string.btn_check_balance),
             rightLabel = stringResource(R.string.btn_mini_statement),
@@ -362,7 +365,7 @@ private fun SavingsCard(
 private fun ShareCapitalCard(shareCapital: Double) {
     SummaryCard {
         CardHeader(
-            icon     = Icons.Default.TrendingUp,
+            icon     = Icons.AutoMirrored.Filled.TrendingUp,
             title    = stringResource(R.string.card_share_capital),
             subtitle = stringResource(R.string.currency_amount, "%.2f".format(shareCapital))
         )
@@ -373,11 +376,11 @@ private fun ShareCapitalCard(shareCapital: Double) {
 private fun LoanBalanceCard(activeLoanCount: Int, onMyLoans: () -> Unit) {
     SummaryCard {
         CardHeader(
-            icon     = Icons.Default.Assignment,
+            icon     = Icons.AutoMirrored.Filled.Assignment,
             title    = stringResource(R.string.card_loan_balance),
             subtitle = stringResource(R.string.loans_given, activeLoanCount)
         )
-        HorizontalDivider(modifier = Modifier.padding(vertical = dimensionResource(R.dimen.spacingSmall) + 2.dp))
+        HorizontalDivider(modifier = Modifier.padding(vertical = dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.spacingXXSmall)))
         CardActionRow(
             leftLabel    = stringResource(R.string.btn_check_balance),
             rightLabel   = stringResource(R.string.btn_view_my_loans),
@@ -405,7 +408,7 @@ private fun CheckBalanceDialog(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(vertical = 4.dp),
+                        .padding(vertical = dimensionResource(R.dimen.spacingTiny)),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(
@@ -417,11 +420,11 @@ private fun CheckBalanceDialog(
                         fontWeight = FontWeight.Bold
                     )
                 }
-                HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
+                HorizontalDivider(modifier = Modifier.padding(vertical =  dimensionResource(R.dimen.spacingTiny)))
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(vertical = 4.dp),
+                        .padding(vertical = dimensionResource(R.dimen.spacingTiny)),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(
@@ -482,7 +485,7 @@ private fun CardHeader(icon: ImageVector, title: String, subtitle: String) {
             tint               = SaccoBlue,
             modifier           = Modifier.size(dimensionResource(R.dimen.cardHeaderIconSize))
         )
-        Spacer(modifier = Modifier.width(dimensionResource(R.dimen.spacingSmall) + 4.dp))
+        Spacer(modifier = Modifier.width(dimensionResource(R.dimen.spacingSmall) +  dimensionResource(R.dimen.spacingTiny)))
         Column {
             Text(
                 text  = title,
@@ -542,4 +545,3 @@ private fun SectionLabel(text: String) {
         )
     )
 }
-
