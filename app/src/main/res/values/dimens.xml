@@ -10,6 +10,7 @@
     <dimen name="spacingTiny">4dp</dimen>
     <dimen name="spacingXXSmall">2dp</dimen>
     <dimen name="letterSpacing">1sp</dimen>
+    <dimen name="spacingNone">0dp</dimen>
 
 
     <!-- ── Buttons ────────────────────────────────────────────────────────── -->
