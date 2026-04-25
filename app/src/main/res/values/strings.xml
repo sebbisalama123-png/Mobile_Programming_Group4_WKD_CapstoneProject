@@ -133,7 +133,7 @@
     <string name="title_settings">SETTINGS</string>
     <string name="settings_section_app">App Information</string>
     <string name="settings_app_name">Application</string>
-    <string name="settings_app_value">Unity Sacco v1.0</string>
+    <string name="settings_app_value">Unity Sacco</string>
     <string name="settings_sacco_name">SACCO Name</string>
     <string name="settings_sacco_value">Unity Savings and Credit Co-operative</string>
     <string name="settings_contact">Support Contact</string>
