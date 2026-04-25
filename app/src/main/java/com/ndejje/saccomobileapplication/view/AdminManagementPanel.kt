@@ -232,7 +232,7 @@ private fun LoanRequestCard(
                             fontWeight = FontWeight.SemiBold
                         ),
                         modifier = Modifier.padding(
-                            horizontal = dimensionResource(R.dimen.spacingSmall) + 2.dp,
+                            horizontal = dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.spacingXXSmall),
                             vertical   = dimensionResource(R.dimen.spacingTiny)
                         )
                     )
