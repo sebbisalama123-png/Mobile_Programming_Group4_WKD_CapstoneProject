@@ -111,7 +111,7 @@ fun ForgotPasswordScreen(
                 contentDescription = null,
                 tint = SaccoBlue,
                 modifier = Modifier
-                    .size(56.dp)
+                    .size(dimensionResource(R.dimen.circularButtonSize))
                     .align(Alignment.CenterHorizontally)
                     .padding(top = dimensionResource(R.dimen.spacingMedium))
             )
