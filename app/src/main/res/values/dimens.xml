@@ -9,6 +9,8 @@
     <dimen name="spacingFieldGap">14dp</dimen>
     <dimen name="spacingTiny">4dp</dimen>
     <dimen name="spacingXXSmall">2dp</dimen>
+    <dimen name="letterSpacing">1sp</dimen>
+
 
     <!-- ── Buttons ────────────────────────────────────────────────────────── -->
     <dimen name="buttonHeight">70dp</dimen>

@@ -10,6 +10,9 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Assignment
+import androidx.compose.material.icons.automirrored.filled.List
+import androidx.compose.material.icons.automirrored.filled.TrendingUp
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -283,8 +286,8 @@ private fun QuickActionsRow(
 ) {
     val actions = listOf(
         QuickAction(stringResource(R.string.action_topup_savings), Icons.Default.AccountBalance) { onTopUpSavings() },
-        QuickAction(stringResource(R.string.action_apply_loan), Icons.Default.Assignment) { onApplyLoan() },
-        QuickAction(stringResource(R.string.action_my_loans), Icons.Default.List) { onMyLoans() },
+        QuickAction(stringResource(R.string.action_apply_loan), Icons.AutoMirrored.Filled.Assignment) { onApplyLoan() },
+        QuickAction(stringResource(R.string.action_my_loans), Icons.AutoMirrored.Filled.List) { onMyLoans() },
         QuickAction(stringResource(R.string.action_change_password), Icons.Default.Lock) { onChangePassword() }
     )
 
@@ -362,7 +365,7 @@ private fun SavingsCard(
 private fun ShareCapitalCard(shareCapital: Double) {
     SummaryCard {
         CardHeader(
-            icon     = Icons.Default.TrendingUp,
+            icon     = Icons.AutoMirrored.Filled.TrendingUp,
             title    = stringResource(R.string.card_share_capital),
             subtitle = stringResource(R.string.currency_amount, "%.2f".format(shareCapital))
         )
@@ -373,7 +376,7 @@ private fun ShareCapitalCard(shareCapital: Double) {
 private fun LoanBalanceCard(activeLoanCount: Int, onMyLoans: () -> Unit) {
     SummaryCard {
         CardHeader(
-            icon     = Icons.Default.Assignment,
+            icon     = Icons.AutoMirrored.Filled.Assignment,
             title    = stringResource(R.string.card_loan_balance),
             subtitle = stringResource(R.string.loans_given, activeLoanCount)
         )
@@ -542,4 +545,3 @@ private fun SectionLabel(text: String) {
         )
     )
 }
-
