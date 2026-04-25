@@ -180,7 +180,7 @@ fun ForgotPasswordScreen(
                         CircularProgressIndicator(
                             modifier = Modifier.size(dimensionResource(R.dimen.progressIndicatorSize)),
                             color = White,
-                            strokeWidth = 2.dp
+                            strokeWidth = dimensionResource(R.dimen.spacingXXSmall)
                         )
                     } else {
                         Text(text = stringResource(R.string.btn_verify_identity), fontWeight = FontWeight.Bold)
@@ -225,7 +225,7 @@ fun ForgotPasswordScreen(
                         CircularProgressIndicator(
                             modifier = Modifier.size(dimensionResource(R.dimen.progressIndicatorSize)),
                             color = White,
-                            strokeWidth = 2.dp
+                            strokeWidth = dimensionResource(R.dimen.spacingXXSmall)
                         )
                     } else {
                         Text(text = stringResource(R.string.btn_reset_password), fontWeight = FontWeight.Bold)
