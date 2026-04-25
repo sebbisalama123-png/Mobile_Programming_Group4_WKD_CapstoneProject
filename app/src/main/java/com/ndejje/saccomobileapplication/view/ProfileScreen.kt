@@ -133,7 +133,7 @@ private fun ProfileContent(data: ProfileData, modifier: Modifier = Modifier) {
 
         Box(
             modifier = Modifier
-                .size(88.dp)
+                .size(dimensionResource(R.dimen.spacingXXLarge))
                 .background(SaccoBlue, CircleShape)
                 .align(Alignment.CenterHorizontally),
             contentAlignment = Alignment.Center
