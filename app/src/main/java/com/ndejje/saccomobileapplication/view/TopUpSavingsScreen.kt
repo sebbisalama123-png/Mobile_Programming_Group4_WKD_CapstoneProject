@@ -107,7 +107,7 @@ fun TopUpSavingsScreen(
                 contentDescription = null,
                 tint = SaccoBlue,
                 modifier = Modifier
-                    .size(56.dp)
+                    .size(dimensionResource(R.dimen.circularButtonSize))
                     .align(Alignment.CenterHorizontally)
                     .padding(top = dimensionResource(R.dimen.spacingMedium))
             )
@@ -175,7 +175,7 @@ fun TopUpSavingsScreen(
                     CircularProgressIndicator(
                         modifier = Modifier.size(dimensionResource(R.dimen.progressIndicatorSize)),
                         color = White,
-                        strokeWidth = 2.dp
+                        strokeWidth = dimensionResource(R.dimen.spacingXXSmall)
                     )
                 } else {
                     Text(text = stringResource(R.string.btn_topup), fontWeight = FontWeight.Bold)
