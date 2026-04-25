@@ -402,13 +402,13 @@ private fun BottomNavButtons(
                 containerColor         = SaccoBlue,
                 disabledContainerColor = MediumGrey
             ),
-            contentPadding = PaddingValues(0.dp)
+            contentPadding = PaddingValues(dimensionResource(R.dimen.spacingNone))
         ) {
             if (isLoading) {
                 CircularProgressIndicator(
                     modifier    = Modifier.size(dimensionResource(R.dimen.progressIndicatorSizeSmall)),
                     color       = White,
-                    strokeWidth = 2.dp
+                    strokeWidth = dimensionResource(R.dimen.spacingXXSmall)
                 )
             } else {
                 Icon(
