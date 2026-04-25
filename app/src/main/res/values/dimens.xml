@@ -11,6 +11,7 @@
     <dimen name="spacingXXSmall">2dp</dimen>
     <dimen name="letterSpacing">1sp</dimen>
     <dimen name="spacingNone">0dp</dimen>
+    <dimen name="hairlineStroke">0.5dp</dimen>
 
 
     <!-- ── Buttons ────────────────────────────────────────────────────────── -->

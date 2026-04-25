@@ -240,9 +240,9 @@ private fun LoanRequestCard(
             }
 
             HorizontalDivider(
-                modifier  = Modifier.padding(vertical = dimensionResource(R.dimen.spacingSmall) + 2.dp),
+                modifier  = Modifier.padding(vertical = dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.spacingXXSmall)),
                 color     = MaterialTheme.colorScheme.outlineVariant,
-                thickness = 0.5.dp
+                thickness = dimensionResource(R.dimen.hairlineStroke)
             )
 
             // ── Amount ────────────────────────────────────────────────────────
