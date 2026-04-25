@@ -21,6 +21,8 @@
     <dimen name="progressIndicatorSize">22dp</dimen>
     <dimen name="progressIndicatorSizeSmall">20dp</dimen>
     <dimen name="thinStroke">1dp</dimen>
+    <dimen name="thickStroke">2dp</dimen>
+
 
     <!-- ── Logo / Branding ────────────────────────────────────────────────── -->
     <dimen name="logoBoxSize">80dp</dimen>
