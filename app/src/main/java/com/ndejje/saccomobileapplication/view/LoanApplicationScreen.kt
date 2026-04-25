@@ -307,7 +307,7 @@ private fun InfoRow(
 private fun RowDivider() {
     HorizontalDivider(
         color     = MaterialTheme.colorScheme.outlineVariant,
-        thickness = 0.5.dp
+        thickness = dimensionResource(R.dimen.hairlineStroke)
     )
 }
 
@@ -383,7 +383,7 @@ private fun BottomNavButtons(
             modifier       = Modifier.size(dimensionResource(R.dimen.circularButtonSize)),
             shape          = CircleShape,
             colors         = ButtonDefaults.buttonColors(containerColor = SaccoRed),
-            contentPadding = PaddingValues(0.dp)
+            contentPadding = PaddingValues(dimensionResource(R.dimen.spacingNone))
         ) {
             Icon(
                 imageVector        = Icons.Default.ArrowBack,
