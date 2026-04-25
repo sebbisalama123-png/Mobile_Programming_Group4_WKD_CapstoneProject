@@ -73,4 +73,10 @@ dependencies {
 
     // Navigation
     implementation("androidx.navigation:navigation-compose:2.8.4")
+
+    // Testing - Added for QA Role
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
+    testImplementation("io.mockk:mockk:1.13.10")
+    testImplementation("app.cash.turbine:turbine:1.1.0")
+    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
 }
