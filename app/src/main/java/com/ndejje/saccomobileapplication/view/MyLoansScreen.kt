@@ -133,7 +133,7 @@ private fun MyLoansContent(
             selectedTabIndex = LoanTab.entries.indexOf(selectedTab),
             containerColor   = MaterialTheme.colorScheme.surface,
             contentColor     = SaccoBlue,
-            edgePadding      = 0.dp
+            edgePadding      = dimensionResource(R.dimen.spacingNone)
         ) {
             LoanTab.entries.forEach { tab ->
                 val count = if (tab.filter == null) loans.size
@@ -151,7 +151,7 @@ private fun MyLoansContent(
             }
         }
 
-        HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness = 0.5.dp)
+        HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness =dimensionResource(R.dimen.hairlineStroke) )
 
         if (displayed.isEmpty()) {
             Box(
