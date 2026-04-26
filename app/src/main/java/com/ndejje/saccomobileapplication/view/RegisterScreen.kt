@@ -194,7 +194,7 @@ fun RegisterScreen(
                     CircularProgressIndicator(
                         modifier    = Modifier.size(dimensionResource(R.dimen.progressIndicatorSize)),
                         color       = White,
-                        strokeWidth = 2.dp
+                        strokeWidth =dimensionResource(R.dimen.spacingXXSmall)
                     )
                 } else {
                     Text(
