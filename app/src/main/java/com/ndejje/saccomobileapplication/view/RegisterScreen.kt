@@ -170,7 +170,7 @@ fun RegisterScreen(
 
             // ── Error message ─────────────────────────────────────────────────
             uiState.errorMessage?.let { message ->
-                Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingSmall) + 2.dp))
+                Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.thickStroke)))
                 Text(
                     text  = message,
                     color = SaccoRed,
