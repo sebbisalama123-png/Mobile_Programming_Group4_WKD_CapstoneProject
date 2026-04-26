@@ -162,7 +162,7 @@ private fun SettingsRow(label: String, value: String) {
             style = MaterialTheme.typography.bodyMedium.copy(color = MediumGrey),
             modifier = Modifier.weight(1f)
         )
-        Spacer(modifier = Modifier.width(8.dp))
+        Spacer(modifier = Modifier.width(dimensionResource(R.dimen.buttonCornerRadius)))
         Text(
             text = value,
             style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.SemiBold)
