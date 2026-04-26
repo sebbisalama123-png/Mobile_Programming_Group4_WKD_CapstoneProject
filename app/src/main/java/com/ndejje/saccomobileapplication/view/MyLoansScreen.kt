@@ -218,7 +218,7 @@ private fun LoanListItem(loan: LoanItem) {
                         color      = SaccoBlue
                     )
                 )
-                Spacer(modifier = Modifier.height(4.dp))
+                Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingTiny)))
                 StatusBadge(status = loan.status)
             }
         }
@@ -240,7 +240,7 @@ private fun StatusBadge(status: String) {
     ) {
         Text(
             text     = status,
-            modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp),
+            modifier = Modifier.padding(horizontal = dimensionResource(R.dimen.buttonCornerRadius), vertical = dimensionResource(R.dimen.spacingXXSmall)),
             style    = MaterialTheme.typography.labelSmall.copy(
                 fontWeight = FontWeight.SemiBold,
                 color      = textColor
