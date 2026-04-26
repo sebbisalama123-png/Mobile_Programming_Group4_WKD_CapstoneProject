@@ -169,7 +169,7 @@ private fun MyLoansContent(
                     LoanListItem(loan = loan)
                     HorizontalDivider(
                         color     = MaterialTheme.colorScheme.outlineVariant,
-                        thickness = 0.5.dp
+                        thickness = dimensionResource(R.dimen.hairlineStroke)
                     )
                 }
             }
@@ -186,7 +186,7 @@ private fun LoanListItem(loan: LoanItem) {
             Box(
                 modifier         = Modifier
                     .size(dimensionResource(R.dimen.transactionIconSize))
-                    .background(color = SaccoBlue, shape = RoundedCornerShape(8.dp)),
+                    .background(color = SaccoBlue, shape = RoundedCornerShape(dimensionResource(R.dimen.buttonCornerRadius))),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
