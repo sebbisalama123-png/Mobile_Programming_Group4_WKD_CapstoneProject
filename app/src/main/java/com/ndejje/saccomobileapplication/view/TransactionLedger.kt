@@ -131,7 +131,7 @@ private fun LedgerContent(
                 TransactionItem(transaction = transaction)
                 HorizontalDivider(
                     color     = MaterialTheme.colorScheme.outlineVariant,
-                    thickness = 0.5.dp
+                    thickness = dimensionResource(R.dimen.hairlineStroke)
                 )
             }
         }
