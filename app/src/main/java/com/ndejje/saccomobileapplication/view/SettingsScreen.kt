@@ -92,12 +92,11 @@ fun SettingsScreen(
                         label = stringResource(R.string.settings_app_name),
                         value = stringResource(R.string.settings_app_value)
                     )
-                    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness = 0.5.dp)
+                    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness =dimensionResource(R.dimen.hairlineStroke))
                     SettingsRow(
                         label = stringResource(R.string.settings_sacco_name),
                         value = stringResource(R.string.settings_sacco_value)
                     )
-                    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness = 0.5.dp)
                     SettingsRow(
                         label = stringResource(R.string.settings_contact),
                         value = stringResource(R.string.settings_contact_value)
