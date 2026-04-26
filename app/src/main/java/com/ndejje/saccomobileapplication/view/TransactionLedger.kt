@@ -165,7 +165,7 @@ private fun LedgerSummaryHeader(count: Int) {
     }
     HorizontalDivider(
         color     = MaterialTheme.colorScheme.outlineVariant,
-        thickness = 0.5.dp
+        thickness = dimensionResource(R.dimen.hairlineStroke)
     )
 }
 
