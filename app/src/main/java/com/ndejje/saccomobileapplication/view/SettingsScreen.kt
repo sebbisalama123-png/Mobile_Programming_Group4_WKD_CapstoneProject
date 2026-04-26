@@ -121,7 +121,7 @@ fun SettingsScreen(
                         )
                     },
                     headlineContent = {
-                        TextButton(onClick = onLogout, contentPadding = PaddingValues(0.dp)) {
+                        TextButton(onClick = onLogout, contentPadding = PaddingValues(dimensionResource(R.dimen.spacingNone))) {
                             Text(
                                 text = stringResource(R.string.settings_logout),
                                 color = SaccoRed,
