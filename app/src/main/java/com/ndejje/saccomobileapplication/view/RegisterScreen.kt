@@ -68,7 +68,7 @@ fun RegisterScreen(
                 .verticalScroll(rememberScrollState())
                 .padding(
                     horizontal = dimensionResource(R.dimen.screenPadding),
-                    vertical   = dimensionResource(R.dimen.spacingMedium) + 4.dp
+                    vertical   = dimensionResource(R.dimen.spacingMedium) + dimensionResource(R.dimen.spacingTiny)
                 ),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
