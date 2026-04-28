@@ -68,7 +68,7 @@ fun RegisterScreen(
                 .verticalScroll(rememberScrollState())
                 .padding(
                     horizontal = dimensionResource(R.dimen.screenPadding),
-                    vertical   = dimensionResource(R.dimen.spacingMedium) + 4.dp
+                    vertical   = dimensionResource(R.dimen.spacingMedium) + dimensionResource(R.dimen.spacingTiny)
                 ),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -170,7 +170,7 @@ fun RegisterScreen(
 
             // ── Error message ─────────────────────────────────────────────────
             uiState.errorMessage?.let { message ->
-                Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingSmall) + 2.dp))
+                Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.thickStroke)))
                 Text(
                     text  = message,
                     color = SaccoRed,
@@ -194,7 +194,7 @@ fun RegisterScreen(
                     CircularProgressIndicator(
                         modifier    = Modifier.size(dimensionResource(R.dimen.progressIndicatorSize)),
                         color       = White,
-                        strokeWidth = 2.dp
+                        strokeWidth =dimensionResource(R.dimen.spacingXXSmall)
                     )
                 } else {
                     Text(

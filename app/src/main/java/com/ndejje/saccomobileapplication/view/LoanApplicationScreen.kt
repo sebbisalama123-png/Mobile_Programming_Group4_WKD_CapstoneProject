@@ -125,7 +125,7 @@ private fun LoanApplicationContent(
             .verticalScroll(rememberScrollState())
             .padding(
                 horizontal = dimensionResource(R.dimen.spacingMedium),
-                vertical   = dimensionResource(R.dimen.spacingSmall) + 4.dp
+                vertical   = dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.spacingTiny)
             )
     ) {
         Text(
@@ -134,7 +134,7 @@ private fun LoanApplicationContent(
                 fontWeight = FontWeight.Bold,
                 color      = SaccoRed
             ),
-            modifier   = Modifier.padding(bottom = dimensionResource(R.dimen.spacingSmall) + 4.dp)
+            modifier   = Modifier.padding(bottom = dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.spacingTiny) )
         )
 
         LoanProductDropdown(
@@ -142,7 +142,7 @@ private fun LoanApplicationContent(
             onSelect = onProductSelect
         )
 
-        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingMedium) + 4.dp))
+        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingMedium) +dimensionResource(R.dimen.spacingTiny)))
 
         EligibilityInfoCard(uiState = uiState)
 
@@ -236,7 +236,7 @@ private fun EligibilityInfoCard(uiState: LoanApplicationUiState) {
         Column(
             modifier = Modifier.padding(
                 horizontal = dimensionResource(R.dimen.cardPaddingHorizontal),
-                vertical   = dimensionResource(R.dimen.spacingSmall) + 4.dp
+                vertical   = dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.spacingTiny)
             )
         ) {
             InfoRow(
@@ -307,7 +307,7 @@ private fun InfoRow(
 private fun RowDivider() {
     HorizontalDivider(
         color     = MaterialTheme.colorScheme.outlineVariant,
-        thickness = 0.5.dp
+        thickness = dimensionResource(R.dimen.hairlineStroke)
     )
 }
 
@@ -383,7 +383,7 @@ private fun BottomNavButtons(
             modifier       = Modifier.size(dimensionResource(R.dimen.circularButtonSize)),
             shape          = CircleShape,
             colors         = ButtonDefaults.buttonColors(containerColor = SaccoRed),
-            contentPadding = PaddingValues(0.dp)
+            contentPadding = PaddingValues(dimensionResource(R.dimen.spacingNone))
         ) {
             Icon(
                 imageVector        = Icons.Default.ArrowBack,
@@ -402,13 +402,13 @@ private fun BottomNavButtons(
                 containerColor         = SaccoBlue,
                 disabledContainerColor = MediumGrey
             ),
-            contentPadding = PaddingValues(0.dp)
+            contentPadding = PaddingValues(dimensionResource(R.dimen.spacingNone))
         ) {
             if (isLoading) {
                 CircularProgressIndicator(
                     modifier    = Modifier.size(dimensionResource(R.dimen.progressIndicatorSizeSmall)),
                     color       = White,
-                    strokeWidth = 2.dp
+                    strokeWidth = dimensionResource(R.dimen.spacingXXSmall)
                 )
             } else {
                 Icon(

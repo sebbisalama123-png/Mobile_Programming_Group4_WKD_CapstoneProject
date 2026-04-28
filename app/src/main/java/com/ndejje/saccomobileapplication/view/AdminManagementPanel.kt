@@ -232,7 +232,7 @@ private fun LoanRequestCard(
                             fontWeight = FontWeight.SemiBold
                         ),
                         modifier = Modifier.padding(
-                            horizontal = dimensionResource(R.dimen.spacingSmall) + 2.dp,
+                            horizontal = dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.spacingXXSmall),
                             vertical   = dimensionResource(R.dimen.spacingTiny)
                         )
                     )
@@ -240,9 +240,9 @@ private fun LoanRequestCard(
             }
 
             HorizontalDivider(
-                modifier  = Modifier.padding(vertical = dimensionResource(R.dimen.spacingSmall) + 2.dp),
+                modifier  = Modifier.padding(vertical = dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.spacingXXSmall)),
                 color     = MaterialTheme.colorScheme.outlineVariant,
-                thickness = 0.5.dp
+                thickness = dimensionResource(R.dimen.hairlineStroke)
             )
 
             // ── Amount ────────────────────────────────────────────────────────
@@ -254,7 +254,7 @@ private fun LoanRequestCard(
                 )
             )
 
-            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingSmall) + 4.dp))
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingSmall) + dimensionResource(R.dimen.spacingTiny)))
 
             // ── Action row ────────────────────────────────────────────────────
             Row(
@@ -264,7 +264,7 @@ private fun LoanRequestCard(
             ) {
                 OutlinedButton(
                     onClick = onReject,
-                    border  = BorderStroke(1.dp, SaccoRed)
+                    border  = BorderStroke(dimensionResource(R.dimen.thinStroke), SaccoRed)
                 ) {
                     Text(text = stringResource(R.string.btn_reject), color = SaccoRed)
                 }

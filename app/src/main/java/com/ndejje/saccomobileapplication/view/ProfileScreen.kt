@@ -133,7 +133,7 @@ private fun ProfileContent(data: ProfileData, modifier: Modifier = Modifier) {
 
         Box(
             modifier = Modifier
-                .size(88.dp)
+                .size(dimensionResource(R.dimen.spacingXXLarge))
                 .background(SaccoBlue, CircleShape)
                 .align(Alignment.CenterHorizontally),
             contentAlignment = Alignment.Center
@@ -142,11 +142,11 @@ private fun ProfileContent(data: ProfileData, modifier: Modifier = Modifier) {
                 imageVector = Icons.Default.AccountCircle,
                 contentDescription = null,
                 tint = White,
-                modifier = Modifier.size(72.dp)
+                modifier = Modifier.size(dimensionResource(R.dimen.spacingXLarge))
             )
         }
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingSmall)))
 
         Text(
             text = data.fullName,
@@ -195,7 +195,7 @@ private fun ProfileRow(label: String, value: String) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(text = label, style = MaterialTheme.typography.bodyMedium.copy(color = MediumGrey))
-        Spacer(modifier = Modifier.width(8.dp))
+        Spacer(modifier = Modifier.width(dimensionResource(R.dimen.spacingSmall)))
         Text(
             text = value,
             style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.SemiBold)
@@ -205,5 +205,5 @@ private fun ProfileRow(label: String, value: String) {
 
 @Composable
 private fun ProfileDivider() {
-    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness = 0.5.dp)
+    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness = dimensionResource(R.dimen.hairlineStroke))
 }

@@ -92,12 +92,11 @@ fun SettingsScreen(
                         label = stringResource(R.string.settings_app_name),
                         value = stringResource(R.string.settings_app_value)
                     )
-                    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness = 0.5.dp)
+                    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness =dimensionResource(R.dimen.hairlineStroke))
                     SettingsRow(
                         label = stringResource(R.string.settings_sacco_name),
                         value = stringResource(R.string.settings_sacco_value)
                     )
-                    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness = 0.5.dp)
                     SettingsRow(
                         label = stringResource(R.string.settings_contact),
                         value = stringResource(R.string.settings_contact_value)
@@ -122,7 +121,7 @@ fun SettingsScreen(
                         )
                     },
                     headlineContent = {
-                        TextButton(onClick = onLogout, contentPadding = PaddingValues(0.dp)) {
+                        TextButton(onClick = onLogout, contentPadding = PaddingValues(dimensionResource(R.dimen.spacingNone))) {
                             Text(
                                 text = stringResource(R.string.settings_logout),
                                 color = SaccoRed,
@@ -163,7 +162,7 @@ private fun SettingsRow(label: String, value: String) {
             style = MaterialTheme.typography.bodyMedium.copy(color = MediumGrey),
             modifier = Modifier.weight(1f)
         )
-        Spacer(modifier = Modifier.width(8.dp))
+        Spacer(modifier = Modifier.width(dimensionResource(R.dimen.buttonCornerRadius)))
         Text(
             text = value,
             style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.SemiBold)

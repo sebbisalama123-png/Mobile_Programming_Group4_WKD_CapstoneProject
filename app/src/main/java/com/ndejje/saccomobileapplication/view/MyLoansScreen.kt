@@ -133,7 +133,7 @@ private fun MyLoansContent(
             selectedTabIndex = LoanTab.entries.indexOf(selectedTab),
             containerColor   = MaterialTheme.colorScheme.surface,
             contentColor     = SaccoBlue,
-            edgePadding      = 0.dp
+            edgePadding      = dimensionResource(R.dimen.spacingNone)
         ) {
             LoanTab.entries.forEach { tab ->
                 val count = if (tab.filter == null) loans.size
@@ -151,7 +151,7 @@ private fun MyLoansContent(
             }
         }
 
-        HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness = 0.5.dp)
+        HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness =dimensionResource(R.dimen.hairlineStroke) )
 
         if (displayed.isEmpty()) {
             Box(
@@ -169,7 +169,7 @@ private fun MyLoansContent(
                     LoanListItem(loan = loan)
                     HorizontalDivider(
                         color     = MaterialTheme.colorScheme.outlineVariant,
-                        thickness = 0.5.dp
+                        thickness = dimensionResource(R.dimen.hairlineStroke)
                     )
                 }
             }
@@ -186,7 +186,7 @@ private fun LoanListItem(loan: LoanItem) {
             Box(
                 modifier         = Modifier
                     .size(dimensionResource(R.dimen.transactionIconSize))
-                    .background(color = SaccoBlue, shape = RoundedCornerShape(8.dp)),
+                    .background(color = SaccoBlue, shape = RoundedCornerShape(dimensionResource(R.dimen.buttonCornerRadius))),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
@@ -218,7 +218,7 @@ private fun LoanListItem(loan: LoanItem) {
                         color      = SaccoBlue
                     )
                 )
-                Spacer(modifier = Modifier.height(4.dp))
+                Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacingTiny)))
                 StatusBadge(status = loan.status)
             }
         }
@@ -240,7 +240,7 @@ private fun StatusBadge(status: String) {
     ) {
         Text(
             text     = status,
-            modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp),
+            modifier = Modifier.padding(horizontal = dimensionResource(R.dimen.buttonCornerRadius), vertical = dimensionResource(R.dimen.spacingXXSmall)),
             style    = MaterialTheme.typography.labelSmall.copy(
                 fontWeight = FontWeight.SemiBold,
                 color      = textColor

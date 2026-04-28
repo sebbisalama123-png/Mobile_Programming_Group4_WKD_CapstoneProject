@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- ── Spacing ────────────────────────────────────────────────────────── -->
+
+    <dimen name="spacingXXLarge">88dp</dimen>
+    <dimen name="spacingXLarge">72dp</dimen>
     <dimen name="screenPadding">24dp</dimen>
     <dimen name="spacingLarge">24dp</dimen>
     <dimen name="spacingMedium">16dp</dimen>
@@ -9,6 +12,10 @@
     <dimen name="spacingFieldGap">14dp</dimen>
     <dimen name="spacingTiny">4dp</dimen>
     <dimen name="spacingXXSmall">2dp</dimen>
+    <dimen name="letterSpacing">1sp</dimen>
+    <dimen name="spacingNone">0dp</dimen>
+    <dimen name="hairlineStroke">0.5dp</dimen>
+
 
     <!-- ── Buttons ────────────────────────────────────────────────────────── -->
     <dimen name="buttonHeight">70dp</dimen>
@@ -16,6 +23,9 @@
     <dimen name="circularButtonSize">56dp</dimen>
     <dimen name="progressIndicatorSize">22dp</dimen>
     <dimen name="progressIndicatorSizeSmall">20dp</dimen>
+    <dimen name="thinStroke">1dp</dimen>
+    <dimen name="thickStroke">2dp</dimen>
+
 
     <!-- ── Logo / Branding ────────────────────────────────────────────────── -->
     <dimen name="logoBoxSize">80dp</dimen>
