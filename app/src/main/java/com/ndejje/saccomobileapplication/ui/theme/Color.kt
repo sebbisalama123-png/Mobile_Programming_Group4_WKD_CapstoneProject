@@ -13,4 +13,6 @@ val Pink40 = Color(0xFF7D5260)
 // SACCO Application Colors
 val SaccoBlue = Color(0xFF1976D2)
 val SaccoRed = Color(0xFFD32F2F)
+val CreditGreen = Color(0xFF4CAF50)
 val MediumGrey = Color(0xFF757575)
+val White = Color(0xFFFFFFFF)
