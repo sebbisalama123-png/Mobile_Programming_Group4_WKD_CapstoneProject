@@ -4,13 +4,13 @@ This is the Capstone Project for the Mobile Programming (BCS 2201 / BIT 2205) co
 
 ## Team Members & Roles
 
-| Name | Role | Student ID |
-| :--- | :--- | :--- |
-| [Student Name 1] | **Lead Developer** | [ID] |
-| [Student Name 2] | **UI/UX Specialist** | [ID] |
-| [Student Name 3] | **Git and Quality Manager** | [ID] |
-| [Student Name 4] | **Testing and Quality Assurance Engineer** | [ID] |
-| [Student Name 5] | **Documentation and Research Lead** | [ID] |
+| Name                  | Role                        | Student ID |
+
+|[Sebbi Salama]         | **Lead Developer**          | [24/2/306/W/036] |
+| [Kitatta Emmanuel]    | **UI/UX Specialist**        | [24/2/306/W/082] |
+| [Sebbi Salama]        | **Git and Quality Manager** | [24/2/306/W/036] |
+| [Amanya Godfrey]      | **Testing and Quality Assurance Engineer** | [24/2/314/w/674] |
+| [Ssemayengo Joseph]   | **Documentation and Research Lead** | [24/2/314/w/214] |
 
 ## Technical Architecture
 
