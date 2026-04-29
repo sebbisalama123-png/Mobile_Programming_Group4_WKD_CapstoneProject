@@ -77,7 +77,7 @@ An Android mobile application for managing a Savings and Credit Cooperative Orga
 
 ## Project Structure
 
-The core logic and UI components are organized within the `app/src/main/java/com/ndejje/saccoapp/` directory as follows:
+The core logic and UI components are organized within the `app/src/main/java/com/ndejje/saccomobileapplication/` directory as follows:
 
 | Directory / File | Layer | Responsibility | Key Components |
 | :--- | :--- | :--- | :--- |
