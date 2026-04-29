@@ -78,13 +78,13 @@ An Android mobile application for managing a Savings and Credit Cooperative Orga
 ## Project Structure
 
 
-app/src/main/java/com/ndejje/saccoapp/
-├── model/          # Room entities, DAOs, repository
-├── view/           # Composable screens
-├── viewmodel/      # ViewModels and UiState classes
-├── AppNavigation.kt
-├── MainActivity.kt
-└── SaccoApplication.kt
+app/src/main/java/com/ndejje/saccomobileapplication/
+├── model/           # Data layer (Room, API, Repositories)
+├── view/            # UI layer (Jetpack Compose screens)
+├── viewmodel/       # Logic layer (State management)
+├── AppNavigation.kt # Navigation graph and routes
+├── MainActivity.kt  # Entry point activity
+└── SaccoApplication.kt # Application class for DI/Initialization
 
 
 ## Getting Started
