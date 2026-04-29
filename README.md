@@ -1,4 +1,6 @@
-# Ndejje University SACCO Mobile Application
+# Sacco Mobile Application
+
+# App Title: Unity Sacco
 
 This is the Capstone Project for the Mobile Programming (BCS 2201 / BIT 2205) course. The project serves as a digital solution for members of the Ndejje University community to manage their savings, loans, and accounts.
 
@@ -42,8 +44,6 @@ To ensure the application meets professional coding standards and functions corr
 - The `SaccoRepository` instrumented tests pass successfully, guaranteeing that Room database transactions strictly maintain referential integrity and seed required records upon user creation. No data leakage or unhandled SQLite exceptions occur during the tested core functions.
 
 
-# SaccoMobileApplication
-
 An Android mobile application for managing a Savings and Credit Cooperative Organisation (SACCO). Members can register, log in, apply for loans, top up savings, and view their transaction history — all from their phone.
 
 ## Features
@@ -77,14 +77,23 @@ An Android mobile application for managing a Savings and Credit Cooperative Orga
 
 ## Project Structure
 
+The core logic and UI components are organized within the `app/src/main/java/com/ndejje/saccoapp/` directory as follows:
 
-app/src/main/java/com/ndejje/saccomobileapplication/
-├── model/           # Data layer (Room, API, Repositories)
-├── view/            # UI layer (Jetpack Compose screens)
-├── viewmodel/       # Logic layer (State management)
-├── AppNavigation.kt # Navigation graph and routes
-├── MainActivity.kt  # Entry point activity
-└── SaccoApplication.kt # Application class for DI/Initialization
+| Directory / File | Layer | Responsibility | Key Components |
+| :--- | :--- | :--- | :--- |
+| `model/` | **Data** | Handles data persistence and business logic. | Room Entities, DAOs, Repositories |
+| `view/` | **UI** | Contains all Jetpack Compose UI elements. | Composable Screens, UI Components |
+| `viewmodel/` | **Logic** | Manages UI state and handles user interactions. | ViewModels, `UiState` classes |
+| `AppNavigation.kt` | **Navigation** | Defines the app's navigation graph and routes. | `NavHost`, Screen Routes |
+| `MainActivity.kt` | **Entry Point** | The primary Activity that hosts the Compose UI. | `setContent { ... }` |
+| `SaccoApplication.kt` | **Global** | Application-level configuration and initialization. | Database Instances, DI Setup |
+
+## Tech Stack
+
+- **Language:** Kotlin
+- **UI Toolkit:** Jetpack Compose
+- **Local Database:** Room
+- **Architecture:** MVVM
 
 
 ## Getting Started
