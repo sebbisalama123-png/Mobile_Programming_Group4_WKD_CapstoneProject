@@ -1,125 +1,65 @@
-# Sacco Mobile Application
+# Unity Sacco: Mobile Programming Capstone
 
-# App Title: Unity Sacco
+### **Project Identity**
+**App Name:** Unity Sacco  
+> ### ** [▶️ Watch: Unity Sacco Mobile App Demonstration](https://youtu.be/V-113RGYXfI?si=zeoyxHPODluUq4uU)**  
+> **Featured Showcase:** *A role-based technical walkthrough (Problem Pitch, UI/UX, Architecture, QA and Happy Path).*
 
-This is the Capstone Project for the Mobile Programming (BCS 2201 / BIT 2205) course. The project serves as a digital solution for members of the Ndejje University community to manage their savings, loans, and accounts.
+---
 
-## Team Members & Roles
-
-| Name | Role | Student ID |
+## Team Roster
+| Name | Student ID | Clearly Defined Role |
 | :--- | :--- | :--- |
-| Sebbi Salama | **Lead Developer** | 24/2/306/W/036 |
-| Amanya Godfrey | **UI/UX Specialist** | 24/2/314/W/674 |
-| Sebbi Salama | **Git and Quality Manager** | 24/2/306/W/036 |
-| Kitatta Emmanuel | **Testing and QA Engineer** | 24/2/306/W/082 |
-| Ssemayengo Joseph | **Documentation and Research Lead** | 24/2/314/W/214 |
+| **Sebbi Salama** | 24/2/306/W/036 | Lead Developer & Git/Quality Manager |
+| **Kitatta Emmanuel** | 24/2/306/W/082 | Testing and QA Engineer |
+| **Amanya Godfrey** | 24/2/314/W/674 | UI/UX Specialist |
+| **Ssemayengo Joseph** | 24/2/314/W/214 | Documentation and Research Lead |
 
-## Technical Architecture
+---
 
-The application is built entirely in Kotlin and adheres to the **MVVM (Model-View-ViewModel)** architectural pattern. 
-- **UI Framework:** Jetpack Compose (Material 3 styling)
-- **Data Persistence:** Room Database
-- **Asynchronous Operations:** Kotlin Coroutines & Flow
-- **Navigation:** Compose Navigation
+## Feature Set
+*   **Secure Authentication:** Member registration and login with local password hashing.
+*   **Digital Dashboard:** Real-time view of savings balance, share capital, and quick actions.
+*   **Loan Management:** End-to-end application process with status tracking (Pending/Approved/Rejected).
+*   **Transaction Ledger:** Automated mini-statements of all savings and loan activities.
+*   **Admin Control Panel:** Specialized view for managing members and approving/rejecting loan requests.
+*   **Account Security:** Password reset via ID verification and internal profile management.
 
-## Testing and Quality Assurance Summary
+---
 
-**Authored by: Testing and Quality Assurance Engineer**
+## Technical Stack
+*   **Language:** Kotlin
+*   **UI Framework:** Jetpack Compose (Material 3)
+*   **Architecture:** MVVM (Model-View-ViewModel)
+*   **Asynchronous Logic:** Kotlin Coroutines & Flow
+*   **Local Persistence:** Room Database (SQLite)
+*   **Navigation:** Jetpack Navigation Component (Compose)
+*   **Dependency Processing:** KSP (Kotlin Symbol Processing)
 
-To ensure the application meets professional coding standards and functions correctly under various scenarios, both unit tests and integration tests were designed and executed covering the core features of the application.
+---
 
-### What Was Tested
+## QA Summary
+The application underwent rigorous testing to ensure data integrity and state reliability. Below is the summary of core test cases executed:
 
-1. **State Management & Authentication (Unit Test)**:
-   - **Target**: `AuthViewModel.kt`
-   - **Description**: Tested the logic flow and state emission (`AuthUiState`) during the user login process using `kotlinx-coroutines-test`, `Turbine`, and `MockK`. We verified that providing empty credentials correctly emits an `Error` state, and that providing valid credentials communicates with the repository and emits a `Loading` state followed by a `Success` state.
-
-2. **Database Integrity & Data Persistence (Integration Test)**:
-   - **Target**: `SaccoRepository.kt` (using `Room.inMemoryDatabaseBuilder`)
-   - **Description**: Tested the core member registration function (`registerUser`). We verified that executing a registration successfully persists a new `UserEntity`, correctly seeds a `MemberAccountEntity` with opening balances, and generates the initial `TransactionEntity` with accurate timestamps and descriptions. We also tested edge cases such as attempting to register a duplicate phone number.
-
-### Outcomes
-
-- All local unit tests for the `AuthViewModel` pass successfully, confirming that the UI state correctly mirrors the application logic without regressions.
-- The `SaccoRepository` instrumented tests pass successfully, guaranteeing that Room database transactions strictly maintain referential integrity and seed required records upon user creation. No data leakage or unhandled SQLite exceptions occur during the tested core functions.
-
-
-An Android mobile application for managing a Savings and Credit Cooperative Organisation (SACCO). Members can register, log in, apply for loans, top up savings, and view their transaction history — all from their phone.
-
-## Features
-
-### Member
-- *Register / Login* — phone number and password authentication with local hashing
-- *Forgot Password* — reset password by verifying ID number and phone number
-- *Dashboard* — savings balance, share capital, and quick-action shortcuts
-- *Loan Application* — apply for a loan product; status tracked as Pending / Approved / Rejected
-- *My Loans* — view all personal loan requests and their current status
-- *Top Up Savings* — record a savings deposit
-- *Transaction Ledger* — mini-statement of all transactions
-- *Profile* — view account details
-- *Change Password*
-- *Settings*
-
-### Admin
-- *Admin Panel* — manage members, review and approve/reject loan requests
-
-## Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Language | Kotlin |
-| UI | Jetpack Compose + Material 3 |
-| Navigation | Navigation Compose |
-| Architecture | MVVM (ViewModel + UiState) |
-| Local Database | Room (SQLite) |
-| Async | Kotlin Coroutines |
-| Build | Gradle with KSP |
-
-## Project Structure
-
-The core logic and UI components are organized within the `app/src/main/java/com/ndejje/saccomobileapplication/` directory as follows:
-
-| Directory / File | Layer | Responsibility | Key Components |
+### **Test Cases vs. Results**
+| Test Case ID | Feature Tested | Description | Result |
 | :--- | :--- | :--- | :--- |
-| `model/` | **Data** | Handles data persistence and business logic. | Room Entities, DAOs, Repositories |
-| `view/` | **UI** | Contains all Jetpack Compose UI elements. | Composable Screens, UI Components |
-| `viewmodel/` | **Logic** | Manages UI state and handles user interactions. | ViewModels, `UiState` classes |
-| `AppNavigation.kt` | **Navigation** | Defines the app's navigation graph and routes. | `NavHost`, Screen Routes |
-| `MainActivity.kt` | **Entry Point** | The primary Activity that hosts the Compose UI. | `setContent { ... }` |
-| `SaccoApplication.kt` | **Global** | Application-level configuration and initialization. | Database Instances, DI Setup |
+| TC-01 | **Authentication** | Validate login with empty/invalid credentials | **PASS** |
+| TC-02 | **State Management** | Verify `AuthUiState` transitions (Loading -> Success) | **PASS** |
+| TC-03 | **Registration** | Ensure `UserEntity` persists with atomic name values | **PASS** |
+| TC-04 | **Data Integrity** | Verify automatic seeding of `MemberAccount` on signup | **PASS** |
+| TC-05 | **Loan Logic** | Prevent duplicate loan submissions while one is "Pending" | **PASS** |
+| TC-06 | **Room Persistence** | Verify data survival after application process kill | **PASS** |
 
-## Tech Stack
+**Technical Audit:** Unit tests were implemented using `Turbine` and `MockK` for ViewModels, while `Room.inMemoryDatabaseBuilder` was utilized for repository integration tests to prevent data leakage.
 
-- **Language:** Kotlin
-- **UI Toolkit:** Jetpack Compose
-- **Local Database:** Room
-- **Architecture:** MVVM
+---
 
-
-## Getting Started
-
-### Prerequisites
-- Android Studio Hedgehog or later
-- Android SDK 35 (compile), minimum SDK 24 (Android 7.0)
-- JDK 11
-
-### Build & Run
+## Build & Run
 1. Clone the repository.
 2. Open the project in Android Studio.
 3. Let Gradle sync and resolve dependencies.
 4. Run on an emulator or physical device (API 24+).
 
-No external backend or API keys are required — all data is stored locally via Room.
-
-## Database Schema
-
-| Table | Key Columns |
-|---|---|
-| users | userId, fullName, phoneNumber, idNumber, passwordHash |
-| member_accounts | userId, accountNumber, savingsBalance, shareCapital |
-| loan_requests | requestId, userId, loanProduct, amount, status, createdAt |
-| transactions | (see TransactionEntity) |
-
-## Author
-
-*Group 04-WKD* — Year 2, Semester 2 Mobile Programming Project
+---
+*© 2026 Ndejje University - Faculty of Science and IT (Group 04-WKD)*
